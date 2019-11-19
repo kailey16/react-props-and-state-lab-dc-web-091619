@@ -36,7 +36,7 @@ Don't worry about persistence. We will not be saving this data to a real API. So
 if a pet is adopted, on refresh of the page, they will be available for adoption
 again. We are only going to focus on building the front end UI.
 
-## Instructions
+## Instructions  
 
 On a high level, you will be working on several components that form the UI of
 the animal shelter adoption application. There are several components that need
@@ -96,7 +96,7 @@ descendants:
     `<Pet />` children components.
 
 ### `Pet`
-
+  
 1.  Should receive a `pet` prop. Use the attributes in this data to render the
     pet card correctly. It should show the pet's `name`, `type`, `age` and
     `weight`. Based on the pet's `gender`, the component also needs to contain
