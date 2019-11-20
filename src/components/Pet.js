@@ -2,24 +2,24 @@ import React from 'react'
 
 class Pet extends React.Component {
   render() {
-    const pet = this.props.pet
+    const {id, type, gender, name, age, weight, isAdopted} = this.props.pet
     return (
       <div className="card">
         <div className="content">
           <a className="header">
-            {pet.gender === 'male' ? '♂' : '♀'}
-            {pet.name}
+            {gender === 'male' ? '♂' : '♀'}
+            {name}
           </a>
           <div className="meta">
-            <span className="date">{pet.type}</span>
+            <span className="date">{type}</span>
           </div>
           <div className="description">
-            <p>Age: {pet.age}</p>
-            <p>Weight: {pet.weight}</p>
+            <p>Age: {age}</p>
+            <p>Weight: {weight}</p>
           </div>
         </div>
-        {pet.isAdopted ? (<div className="extra content"><button className="ui disabled button">Already adopted</button></div>) : 
-        (<div className="extra content"><button className="ui primary button" onClick={() => this.props.onAdoptPet(pet.id)}>Adopt pet</button></div>)}
+        {isAdopted ? (<div className="extra content"><button className="ui disabled button">Already adopted</button></div>) : 
+        (<div className="extra content"><button className="ui primary button" onClick={() => this.props.onAdoptPet(id)}>Adopt pet</button></div>)}
       </div>
     )
   }
